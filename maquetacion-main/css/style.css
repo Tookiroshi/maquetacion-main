@@ -1,0 +1,345 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400..900;1,400..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Raleway";
+    line-height: 1.5rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  h1,
+  h2,
+  h3 {
+    padding-bottom: 20px;
+  }
+  
+  p {
+    margin: 10px;
+  }
+  
+  img {
+    width: 100%;
+  }
+/* utilidades */
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.text-primary {
+    color: #273cff;
+  }
+  .btn{
+    display: inline-block;
+    background-color: #fdeb43;
+    color:#333 ;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  .btn:hover{
+    background-color: #333;
+    color: #fdeb43;
+  }
+  /* colore a reutilizar */
+  .bg-dark {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .bg-light {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .bg-primary {
+    background-color: #ffecb7;
+    color: #333;
+  }
+  
+  .bg-secondary {
+    background-color: #ffde72;
+    color: #333;
+  }
+  /* paddinsg a reutilizar */
+  .pd-1{
+    padding: 20px 0;
+  }
+  .pd-2 {
+    padding: 20px;
+  }
+  
+  .pd-3 {
+    padding: 30px;
+  }
+  /* navbar */
+  nav {
+    position: relative;
+  }
+  #top-menu{
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    list-style-type: none;
+    display: block;
+  }
+  .menu-container {
+    display: none;
+    position: relative;
+}
+  #top-menu a{
+    color: #fff;
+  }
+  #top-menu h1{
+    margin-left: 5px;
+  }
+  #top-menu .top-menu-container{
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+  }
+  .top-menu-container ul{
+    list-style: none;
+    display: flex;
+  }
+  .active   {
+    font-weight: 700;
+    font-size: larger;
+  }
+  .top-menu-container ul a {
+    display: inline-block;
+    padding: 20px;
+  }
+  .top-menu-container ul a:hover{
+    background-color: #525252;
+    color: #ffdc19;
+  }
+
+
+/* General Styles for Hamburger */
+.hamburger {
+  display: none; /* Hidden by default for larger screens */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 15; /* Ensure it stays on top of other content */
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: #333; /* Dark bar color */
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Style for the Full-Screen Menu */
+.menu {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent dark background */
+  color: white;
+  z-index: 10;
+  text-align: center;
+  padding-top: 15%; /* Center the menu items */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu ul li {
+  margin: 20px 0; /* Space between menu items */
+  font-size: 1.5rem;
+}
+
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+  color: #ffdc19; /* Hover color */
+}
+
+/* Toggle Menu Visibility */
+input.toggler:checked + label + .menu {
+  display: block;
+}
+  /* showcase -----------------*/
+  #showcase {
+    height: 50vh;
+    background: url(../img/bg.jpg) no-repeat center center/cover;
+    color: #cde4ff;
+  }
+  .showcase-container {
+    text-align: center;
+    padding-top: 10rem;
+  }
+  .showcase-container h2{
+    font-size: 2em;
+  }
+.showcase-container p{
+    font-size: 1em;
+    padding: 0 20px;
+}
+/* section info */
+
+#latest-projects {
+    text-align: start;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.content-project {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.content-project-item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 200px; 
+}
+.item2{
+    width: 235px;
+}
+.item3{
+    width: 235px;
+}
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-item p {
+    color: #a5a5a5;
+}
+.info-content h2,
+.info-content p {
+    margin: 0;
+    padding-bottom: 10px; 
+}
+/* section features */
+#our-benefits{
+    display: flex;
+}
+.box{
+    color: #555555;
+    padding: 30px;
+    text-align: center;
+    background-color: #ffecb7;
+}
+.box i{
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+/* abt info */
+
+.contact-details {
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+}
+
+.contact-item {
+  text-align: center;
+}
+
+.contact-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.contact-item p {
+  font-size: 16px;
+  color: #555;
+  
+}
+
+/* Main-Footer */
+#main-footer {
+    text-align: center;
+    padding: 20px;
+  }
+  .insta{
+    color: white;
+  }
+  .disc{
+    color: white;
+  }
+  .tiktok{
+    color: white;
+  }
+  @media screen and (max-width: 768px){
+    #showcase {
+      height: 100vh;
+      margin-top: 4rem;
+      font-stretch: expanded;
+      font-size: 30px;
+    }
+    #showcase h2{
+      margin-top: 5rem;
+    }
+    #showcase p{
+      margin-top: 5rem;
+    }
+  
+    #latest-projects .content-project  {
+    align-items: center;
+    flex-direction: column;
+    }
+    .content-project img{
+      width: 500px;
+    }
+    #our-benefits {
+      flex-direction: column;
+      font-size: 2rem;
+      line-height: 50px;
+      gap: 10px;
+    }
+    #contact {
+      line-height: 50px;
+      font-size: 40px;
+     text-align: center;
+      margin-left: 150px;
+      margin-right: 150px;
+    }
+    
+  /* btn hamburgr-------------- */
+  .hamburger {
+    display: flex;
+  }
+
+  .top-menu-container {
+    display: none; /* Hide standard menu */
+  }
+
+  }
